@@ -92,6 +92,57 @@ let n1,n2;
         console.log('Grade F')
     }
 
+    // Exercise 1 from the presentation
+
+    
+
+    let fridayCash =  prompt('How much cash you have?');
+    if(fridayCash >= 50){
+        console.log('If you have' , fridayCash , 'you can go to a restaurant and cinema');
+    }else if(fridayCash  >= 35){
+        console.log( 'If you have' , fridayCash , 'you can choose one between restaurant and cinema');
+    }else if(fridayCash >=15){
+        console.log( 'If you have' , fridayCash ,'you can go on coffee');
+    }else if(fridayCash < 10) {
+        console.log('If you have' , fridayCash , 'You can buy popcorn and watch a movie at home');
+    }
+
+    // Homework from the presentation
+
+   const year = parseInt(prompt('Enter your birthyear'));
+   const sign = (year - 4) % 12;
+   if(sign == 0){
+    console.log('Rat');
+   }else if(sign == 1){
+    console.log('Ox');
+   }else if(sign == 2){
+    console.log('Tiger');
+   }else if(sign == 3){
+    console.log('Rabbit');
+   }else if(sign == 4){
+    console.log('Dragon');
+   }else if(sign == 5){
+    console.log('Snake');
+   }else if(sign == 6){
+    console.log('Horse');
+   }else if(sign == 7){
+    console.log('Goat');
+   }else if(sign == 8){
+    console.log('Monkey');
+   }else if(sign == 9){
+    console.log('Rooster');
+   }else if(sign == 10){
+    console.log('Dog');
+   }else if(sign == 11){
+    console.log("Pig")
+   }
+
+
+
+
+
+
+
     
     
     
