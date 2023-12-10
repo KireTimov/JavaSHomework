@@ -5,7 +5,7 @@ console.log('______Exercise 1______')
 function findType(value) {
     const typeOfValue = typeof value;
    
-    console.log(`Type of  ${typeOfValue}`);
+    console.log(`The type is  ${typeOfValue}`);
   }
 findType ({}); 
 findType(''); 
@@ -40,7 +40,7 @@ let parseCashOut=(parseInt(cashOut));
 let moneyTakenOut = balance - parseCashOut;
 function cashMachine (moneyTakenOut){
    if (cashOut > balance){
-      console.log(`You dont have enough money on your card`)
+      console.log(`You dont have enough money on your card.`)
    }
     else if (cashOut <= balance){
        moneyTakenOut= balance - cashOut;
