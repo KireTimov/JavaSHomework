@@ -1,14 +1,18 @@
 // Exercise 1
-console.log("Exercise 1")
-
-function tellStory(name,mood,activity){
-
-    const story = `This is ${name}. ${name} is an amazing person. Today he is feeling ${mood}. He is ${activity} today.The end`;
-    console.log(story);
+console.log("Exercise 1");
+function tellStory(array) {
+  
+  console.log(`This is ${array[0]}, ${array[0]} is an amazing person. Today he is ${array[1]} because he is ${array[2]}. The end.`);
 }
-tellStory('Jim', 'fantastic', 'playing football');
+
+let story = ["Jim", "happy", "playing football"];
+tellStory(story);
+
+
+
 
 console.log("Exercise 2");
+
 
 // Exercise 2
 
@@ -30,6 +34,9 @@ function sumOfNumbers(array) {
   
   console.log("Exercise 3");
 
+
+
+
   function arrayOfStrings(string, string1 ,string2, string3, string4){
     const result = `${string} ${string1} ${string2} ${string3} ${string4}`;
     console.log(result);    
@@ -41,32 +48,41 @@ function sumOfNumbers(array) {
   console.log("Exercise 4");
 //   Exercise 4
 
-for (let i = 1; i <= 20; i++) {
-    if (i % 2 === 0) {
-      console.log(i , "\n");
-    } else {
-      console.log(i , " ");
-    }
+function number(){
+  for (let i = 1; i <= 20; i++){
+   if (i % 2 === 0){
+    console.log((i - 1) + " " + i);
+   }      
 }
+}
+
+number();
 
 //   Exercise 5
 
 console.log("Exercise 5");
 
-function sumMaxMin(array) {
-   
-    const maximum = Math.max(...array);
-    const minimum = Math.min(...array);
-    const sum = maximum + minimum;
-  
-    return `Max number is: ${maximum}, Min number is: ${minimum}, The sum of max and min is: ${sum}`;
+
+function sumMaxMin(arrayOfNumbers) {
+
+    maximum = numbers[0];
+    minimum = numbers[0];
+    for(i = 1; i < arrayOfNumbers.length; i++ )
+    if(arrayOfNumbers[i] > maximum){
+      maximum = arrayOfNumbers[i];
+    }else if(arrayOfNumbers[i] < minimum){
+      minimum = arrayOfNumbers[i];
+      
+    }
+     let sum = maximum + minimum;
+    console.log( `Max number is: ${maximum}, Min number is: ${minimum}, The sum of max and min is: ${sum}`);
   }
   
 
   let numbers = [3, 5, 6, 8, 11];
-  const result = sumMaxMin(numbers);
-  console.log(result); 
-
+  sumMaxMin(numbers);
+  
+  
 
   console.log("Exercise 6");
 //   Exercise 6
@@ -76,7 +92,7 @@ function fullNames(firstName, lastName) {
     const fullNames = [];
     for ( i = 0; i < firstName.length; i++) {
       const fullName = `${i + 1} ${firstName[i]} ${lastName[i]}`;
-      fullNames.unshift(fullName);
+      fullNames.push(fullName);
     }
   
     return fullNames;
@@ -86,8 +102,6 @@ function fullNames(firstName, lastName) {
   let lastName = ["Gregory", "Wurtz"];
   const result1 = fullNames(firstName, lastName);
   console.log(result1);
-
-
 
 
 
