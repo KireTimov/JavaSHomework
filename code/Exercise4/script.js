@@ -8,9 +8,6 @@ function tellStory(array) {
 let story = ["Jim", "happy", "playing football"];
 tellStory(story);
 
-
-
-
 console.log("Exercise 2");
 
 
@@ -34,16 +31,14 @@ function sumOfNumbers(array) {
   
   console.log("Exercise 3");
 
-
-
-
-  function arrayOfStrings(string, string1 ,string2, string3, string4){
-    const result = `${string} ${string1} ${string2} ${string3} ${string4}`;
-    console.log(result);    
+  function arrayOfStrings(array){
+    
+    console.log(`${array[0]} ${array[1]} ${array[2]} ${array[3]} ${array[4]}`);    
     
 
   }
-  arrayOfStrings('Hello','there','students','of','SEDC!');
+  let strings = ['Hello', 'there', 'students', 'of', 'SEDC!'];
+  arrayOfStrings(strings);
 
   console.log("Exercise 4");
 //   Exercise 4
