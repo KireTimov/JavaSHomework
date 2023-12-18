@@ -1,15 +1,16 @@
+let rows = parseInt(prompt('Enter the number of rows you want in your table.'));
+let column = parseInt(prompt('Enter the number of columns you want in your table'));
 
-let rows = prompt('Enter the number of rows you want in your table.');
-let colspan = prompt('Enter the number of columns you want in your table');
-function dynamicTable(rows, colspan){
+function dynamicTable(rows, column){
     let table =document.createElement("table");
     let thead = document.createElement("thead");
     let tableRow = document.createElement("tr");
-    for(i=1; i <=colspan; i++){
+    for(i=1; i <=column; i++){
         let th = document.createElement("th");
         th.textContent = 'Column  ' + i;
         
-        tableRow.append(th);
+        tableRow.append(th)
+        ;
     }
     thead.append(tableRow);
     table.append(thead);
@@ -18,10 +19,10 @@ function dynamicTable(rows, colspan){
     let tbody = document.createElement("tbody");
     for(l=1; l<=rows; l++){
         row=document.createElement("tr");
-        for(i=1; i <= colspan; i++){
+        for(i=1; i <= column; i++){
             td=document.createElement("td");
-            td.textContent = i + l;
             row.append(td);
+            
         }
         tbody.append(row);
         table.append(tbody);
@@ -34,7 +35,9 @@ function dynamicTable(rows, colspan){
     
     
     
-}
-dynamicTable(parseInt(rows) , parseInt(colspan));
+    }
+
+dynamicTable(rows ,column);
+
 
 
