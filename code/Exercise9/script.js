@@ -49,21 +49,4 @@ $(document).ready(function () {
 
 
 
-// $(document).ready(function(){
-//     $("p").css("color", "blue");
-//     $("p:first").css("color", "green");
-    
-//     $("button").click(function(){
-//         $(".test").hide(1000);
-//         $(".paragraph").hide(1000);
-
-
-//     });
-//     $("button").click(function(){
-//         $(".test").show(3000);
-//         $(".test").show();
-
-//     });
-
-// });
 
