@@ -15,12 +15,11 @@ $(document).ready(function() {
 
     $('#btn').click( function() {
         
-        $('#message').text('');
-
+        
         
         let text = $('#text').val();
         let color = $('#color').val();
-
+        
         
         if (text !== '' || color !== '') {
             let newHeader = $('<h3>').text(text).css('color', color);
