@@ -81,7 +81,7 @@ function calculate() {
                             firstOperand /= secondOperand;
                             break;
                         }
-                        if (Math.abs(firstOperand) > 9999999) {
+                        if ((firstOperand) > 9999999) {
                                     display.value = 'Error:The number is too large';
                                     return;
                                 }
