@@ -82,11 +82,11 @@ function calculate() {
                             break;
                         }
                         if ((firstOperand) > 9999999) {
-                                    display.value = 'Error:The number is too large';
+                                    display.value = 'Error';
                                     return;
                                 }
-                                if (secondOperand === 0) {
-                                    display.value = 'Error: Cannot divide by 0';
+                        if (secondOperand === 0) {
+                                    display.value = 'Error';
                                     return;
                                 }
                         display.value = firstOperand;
