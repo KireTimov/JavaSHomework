@@ -23,7 +23,7 @@ document.getElementById('button2').onclick = function showReminders (){
     const row = tableBody.insertRow();
 
     for (let j = 0; j < 3; j++) {
-      const cell = row.insertCell(j);
+      const cell = row.insertCell();
 
       switch (j) {
         case 0:
