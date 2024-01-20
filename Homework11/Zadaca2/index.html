@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            padding: 55px;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            
+        }
+        label,input,textarea{
+            
+            background-color: cadetblue;
+        }
+        button{
+            background-color: cadetblue;
+            border-radius: 10px;
+            padding: 10px;
+        }
+     
+
+    </style>
+</head>
+<body>
+    <label for="text">Enter the title</label>
+    <input type="text" id="title" value=""><br>
+    <label for="priority">Enter the priority</label>
+    <input type="text" id="priority" value=""><br>
+    <label for="color">Enter color</label>
+    <input type="color" id="color" value=""><br>
+    <label for="text">Description</label>
+    <textarea id="description" value=""></textarea><br>
+    <button id="button1">Add reminder</button>
+    <button id="button2">Show all reminders</button><br>
+
+    <table id="reminderTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Priority</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="reminderTableBody"></tbody>
+      </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
