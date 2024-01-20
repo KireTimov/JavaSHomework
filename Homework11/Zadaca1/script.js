@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let arrMovies = ['Transporter', 'Gemini Man', 'Jumanji', 'Rambo','Spiderman'];
         let userInput = document.getElementById('input');
 
-        let movieFound;
+        let movieFound= false;
 
         for (let i = 0; i < arrMovies.length; i++) {
             let movie = arrMovies[i]; 
