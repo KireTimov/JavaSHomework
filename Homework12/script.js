@@ -125,15 +125,3 @@ filteredArray(array);
 
 
 // Exercise 7
-console.log("Exercise 7");
-let vowels = (inputWord)=>{
-    let result = 0;
-    let arr = ['a','e','i','o','u'];
-    for(let i = 0; i <arr.length;i++){
-        if(inputWord.includes(arr[i])){
-            result++;
-        }
-    }
-    console.log(`${inputWord} includes ${result} vowels. ` );
-}
-vowels("Hello");
