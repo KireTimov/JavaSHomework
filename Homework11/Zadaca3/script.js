@@ -11,9 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('weight').innerText = `${data.mass}`;
                 document.getElementById('eyeColor').innerText = `${data.eye_color}`;
                 document.getElementById('hairColor').innerText = `${data.hair_color}`;
+                document.getElementById('skinColor').innerText = `${data.skin_color}`;
+
             })
             .catch(error => console.log('Error', error));
     };
 
    
 });
+
