@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="beers.css">
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a class="bar" href="index.html">Beer Bar </a></li>
+                <li><a class="beers" href="beers.html">Beers</a></li>
+                <li><a class="random" href="random-beer">Random Beer</a></li>
+            </ul>
+        </nav>
+        <section>
+            <label for="search"></label>
+            <input type="search" id="search" placeholder="Search">
+            <!-- <button id="button">Search</button> -->
+        </section>
+    </div>
+    
+    <div class="container">
+    
+    <select name="page-size" id="page-size">
+        <option value="" selected disabled>Page Size </option>
+        <option value="5">show 5</option>
+        <option value="10">show 10</option>
+        <option value="20">show 20</option>
+    </select>
+    <select name="sort-by" id="sort-by">
+        <option value="" selected disabled>Sort By </option>
+        <option value="name">name</option>
+        <option value="abv">%alc abv --- abv prop</option>
+        <option value="first_brewed">first-brewed</option>
+        <option value="ibu">bitterness --- ibu prop</option>
+    </select>
+    </div>
+
+    <div id="beersDiv"></div>
+    <div id="sortingDiv"></div>
+    <!-- <button id="buttonX"></button> -->
+
+    <div id="nextAndPrevious">
+        <a href="index.html" id="previous"  class="nextAndPrev" >Previous</a>
+        <a href="index.html" id="next" class="nextAndPrev">Next</a>
+    </div>
+    <div id="mainDetails">
+        <div id="details">
+            
+        </div>
+    <button id="closeButton">X</button>
+    </div>
+    
+    <script src="script1.js"></script>
+   
+</body>
+</html>
