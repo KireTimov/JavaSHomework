@@ -1,3 +1,4 @@
+
 let mainDetails = document.getElementById("mainDetails");
 let beersDiv = document.getElementById("beersDiv");
 let sortingDiv = document.getElementById("sortingDiv");
@@ -22,7 +23,6 @@ let beersApp = (api) => {
 let displayBeers = (data, pageSize) => {
     beersDiv.innerHTML = ''; 
 
-    
     pageSize = parseInt(pageSize) || data.length;
 
     for (let i = 0; i < pageSize && i < data.length; i++) {
@@ -81,7 +81,39 @@ searchBar.addEventListener("input", function() {
     displayBeers(filteredData, pageSizeSelect.value);
 });
 
+
 pageSizeSelect.addEventListener("change", function() {
     displayBeers(beersData, pageSizeSelect.value);
 });
 
+
+
+// sortBy.addEventListener("change", () => {
+//     let selected = sortBy.value;
+//     let sortedData = beersData.slice(); 
+//     if (selected === "name") {
+//         sortedData.sort((a, b) => a.name.localeCompare(b.name));
+//     } else if (selected === "abv") {
+//         sortedData.sort((a, b) => (parseFloat(a.abv) || 0) - (parseFloat(b.abv) || 0));
+//     } else if (selected === "first_brewed") {
+//         sortedData.sort((a, b) => (a.first_brewed) - new Date(b.first_brewed));
+//     } else if (selected === "bitterness") {
+//         sortedData.sort((a, b) => (parseFloat(b.ibu) || 0) - (parseFloat(a.ibu) || 0));
+//     }
+//     displayBeers(sortedData, pageSizeSelect.value);
+// });
+
+sortBy.addEventListener("change", () => {
+    let selected = sortBy.value;
+    let sortedData = beersData.slice(); 
+    if (selected === "name") {
+        sortedData.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (selected === "abv") {
+        sortedData.sort((a, b) => (parseFloat(a.abv) || 0) - (parseFloat(b.abv) || 0));
+    } else if (selected === "first_brewed") {
+        sortedData.sort((a, b) => (parseFloat(a.first_brewed) || 0 ) - (parseFloat(b.first_brewed) || 0 ));
+    } else if (selected === "bitterness") {
+        sortedData.sort((a, b) => (parseFloat(b.ibu) || 0) - (parseFloat(a.ibu) || 0));
+    }
+    displayBeers(sortedData, pageSizeSelect.value);
+});
