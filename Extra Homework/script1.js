@@ -87,22 +87,6 @@ pageSizeSelect.addEventListener("change", function() {
 });
 
 
-
-// sortBy.addEventListener("change", () => {
-//     let selected = sortBy.value;
-//     let sortedData = beersData.slice(); 
-//     if (selected === "name") {
-//         sortedData.sort((a, b) => a.name.localeCompare(b.name));
-//     } else if (selected === "abv") {
-//         sortedData.sort((a, b) => (parseFloat(a.abv) || 0) - (parseFloat(b.abv) || 0));
-//     } else if (selected === "first_brewed") {
-//         sortedData.sort((a, b) => (a.first_brewed) - new Date(b.first_brewed));
-//     } else if (selected === "bitterness") {
-//         sortedData.sort((a, b) => (parseFloat(b.ibu) || 0) - (parseFloat(a.ibu) || 0));
-//     }
-//     displayBeers(sortedData, pageSizeSelect.value);
-// });
-
 sortBy.addEventListener("change", () => {
     let selected = sortBy.value;
     let sortedData = beersData.slice(); 
