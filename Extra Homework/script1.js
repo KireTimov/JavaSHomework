@@ -87,17 +87,28 @@ pageSizeSelect.addEventListener("change", function() {
 });
 
 
+
 sortBy.addEventListener("change", () => {
     let selected = sortBy.value;
-    let sortedData = beersData.slice(); 
+    let sortedBeers = beersData.slice(); 
     if (selected === "name") {
-        sortedData.sort((a, b) => a.name.localeCompare(b.name));
+        sortedBeers.sort((a, b) => a.name.localeCompare(b.name));
     } else if (selected === "abv") {
-        sortedData.sort((a, b) => (parseFloat(a.abv) || 0) - (parseFloat(b.abv) || 0));
+        sortedBeers.sort((a, b) => (parseFloat(b.abv) || 0) - (parseFloat(a.abv) || 0));
     } else if (selected === "first_brewed") {
-        sortedData.sort((a, b) => (parseFloat(a.first_brewed) || 0 ) - (parseFloat(b.first_brewed) || 0 ));
-    } else if (selected === "bitterness") {
-        sortedData.sort((a, b) => (parseFloat(b.ibu) || 0) - (parseFloat(a.ibu) || 0));
+        sortedBeers.sort((a, b) => {
+          
+            let [monthA, yearA] = a.first_brewed.split('/');
+            let [monthB, yearB] = b.first_brewed.split('/');
+            
+            if (yearA !== yearB) {
+                return yearA - yearB;
+            }
+            return monthA - monthB;
+        });
+    } else if (selected === "ibu") {
+        sortedBeers.sort((a, b) => ((b.ph) ) - ((a.ph) ));
     }
-    displayBeers(sortedData, pageSizeSelect.value);
+    displayBeers(sortedBeers, pageSizeSelect.value);
 });
+
