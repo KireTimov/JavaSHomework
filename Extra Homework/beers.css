@@ -114,7 +114,7 @@ body {
 
   }
   
-  #mainDetails {
+  #mainDiv {
     padding: 20px;
     
   }
@@ -126,7 +126,7 @@ body {
     margin-top: 20px;
   }
   
-  .oneBeer {
+  .beerContainer {
     
   width: 300px;   
   margin-bottom: 20px;
@@ -138,7 +138,7 @@ body {
   flex-direction: column; 
   align-items: center; 
   }
-  .oneBeer:hover{
+  .beerContainer:hover{
     background-color: rgb(185, 228, 248);
     transition: 0.7s;
     cursor: pointer;
@@ -208,16 +208,16 @@ body {
     border-radius: 5px;
   }
   
-  #nameBeer h2 {
+  #beerName1 h2 {
     margin: 0;
   }
   
-  #nameBeer h5 {
+  #beerName1 h5 {
     margin: 5px 0;
     font-style: italic;
   }
   
-  #statsBeer h4 {
+  #beersSts h4 {
     margin: 5px 0;
   }
   

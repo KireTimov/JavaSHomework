@@ -21,4 +21,4 @@ fetch("https://api.punkapi.com/v2/beers/random")
             </ul>
         `;
     })
-    .catch(error => console.error("Error fetching random beer:", error));
+    .catch(error => console.error("Error random beer:", error));
