@@ -29,7 +29,7 @@ fs.writeFile(filePath, 'Homework 01 in Basic NodeJS', (err) => {
 
 // const filePath = path.join(import.meta.dirname, 'homework.txt');
 
-// async function writeFileAsync() {
+// async function fileAsync() {
 //   try {
 //     await fs.promises.writeFile(filePath, 'Homework 01 in Basic NodeJS');
 //     await fs.promises.appendFile(filePath, ' FINISHED');
@@ -40,4 +40,4 @@ fs.writeFile(filePath, 'Homework 01 in Basic NodeJS', (err) => {
 //   }
 // }
 
-// writeFileAsync();
+// fileAsync();
